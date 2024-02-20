@@ -6,7 +6,7 @@
 /*   By: nabilhassan <nabilhassan@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 02:37:30 by nabilhassan       #+#    #+#             */
-/*   Updated: 2024/01/15 02:38:19 by nabilhassan      ###   ########.fr       */
+/*   Updated: 2024/02/17 16:40:41 by nabilhassan      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
+	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
 		{
@@ -25,5 +25,9 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
-	return (0);
+	if ((char)c == '\0')
+	{
+		return ((char *)(s + i));
+	}
+	return (NULL);
 }

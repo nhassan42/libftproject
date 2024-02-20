@@ -5,8 +5,8 @@ SRCFILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii
 			ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c\
 			ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c\
 
-BSRCFILES = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c\
-			ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c\
+BSRCFILES = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
+			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
 OBJS = ${SRCFILES:.c=.o}
 BOBJS = ${BSRCFILES:.c=.o}
@@ -18,7 +18,7 @@ RM = rm -f
 
 
 %.o: %.c
-    ${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}

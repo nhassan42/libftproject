@@ -6,7 +6,7 @@
 /*   By: nabilhassan <nabilhassan@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 02:29:07 by nabilhassan       #+#    #+#             */
-/*   Updated: 2024/01/15 03:04:38 by nabilhassan      ###   ########.fr       */
+/*   Updated: 2024/02/19 20:00:50 by nabilhassan      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*destination;
-	const char	*source;
-	size_t		i;
+	unsigned char	*dst_ptr;
+	unsigned char	*src_ptr;
+	size_t			i;
 
-	destination = (char *)dst;
-	source = (const char *)src;
-	if (dst < src)
+	dst_ptr = (unsigned char *)dst;
+	src_ptr = (unsigned char *)src;
+	if (dst > src)
 	{
-		i = 0;
-		while (i < len)
+		while (len != 0)
 		{
-			destination[i] = source[i];
-			i++;
+			len--;
+			dst_ptr[len] = src_ptr[len];
 		}
 	}
 	else
 	{
-		i = len;
-		while (i > 0)
+		i = 0;
+		while (i < len)
 		{
-			destination[i - 1] = source[i - 1];
-			i--;
+			dst_ptr[i] = src_ptr[i];
+			i++;
 		}
 	}
 	return (dst);

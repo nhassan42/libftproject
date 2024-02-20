@@ -6,7 +6,7 @@
 /*   By: nabilhassan <nabilhassan@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 13:52:25 by nabilhassan       #+#    #+#             */
-/*   Updated: 2024/02/12 18:52:15 by nabilhassan      ###   ########.fr       */
+/*   Updated: 2024/02/20 11:21:24 by nabilhassan      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdio.h>
-# include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -30,6 +30,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isalpha(int c);
+int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
